@@ -159,7 +159,7 @@ def nextPage(url="", page="0", showSeasons='True'):
     # Read
     settings.log(urlSearch)
     response = browser.get(urlSearch, verify=False)
-    soup = bs4.BeautifulSoup(response.text)
+    soup = bs4.BeautifulSoup(response.text, 'html5lib')
 
     # Storage information
     source = plugin.get_storage('source')
